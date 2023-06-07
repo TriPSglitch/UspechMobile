@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UspechMobile.AppShell"
+       xmlns:views="clr-namespace:UspechMobile.Views">
+    <TabBar>
+        <ShellContent Title="Домашняя страница" ContentTemplate="{DataTemplate views:HomePage}"/>
+        <ShellContent Title="Расписание" ContentTemplate="{DataTemplate views:SchedulePage}"/>
+        <ShellContent Title="Мои курсы" ContentTemplate="{DataTemplate views:MyCoursesPage}"/>
+        <ShellContent Title="Чат и напоминания" ContentTemplate="{DataTemplate views:HomePage}"/>
+    </TabBar>
+</Shell>

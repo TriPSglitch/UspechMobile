@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UspechMobile.Views.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Фамилия" FontSize="Medium"/>
+            <Entry Text="{Binding Lastname}" FontSize="Medium"/>
+            <Label Text="Имя" FontSize="Medium"/>
+            <Entry Text="{Binding Firstname}" FontSize="Medium"/>
+            <Label Text="Отчество (если есть)" FontSize="Medium"/>
+            <Entry Text="{Binding Middlename}" FontSize="Medium"/>
+            <Label Text="Номер телефона" FontSize="Medium"/>
+            <Entry Text="{Binding PhoneNumber}" FontSize="Medium"/>
+            <Label Text="Почта" FontSize="Medium"/>
+            <Entry Text="{Binding Email}" FontSize="Medium"/>
+            <Label Text="Логин" FontSize="Medium"/>
+            <Entry Text="{Binding Login}" FontSize="Medium"/>
+            <Label Text="Пароль" FontSize="Medium"/>
+            <Entry Text="{Binding Password}" FontSize="Medium" IsPassword="True"/>
+            <Button Text="Зарегистрироваться" Command="{Binding RegitrationCommand}"/>
+            <Button Text="Назад" Command="{Binding BackCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

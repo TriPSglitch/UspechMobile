@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:UspechMobile.ViewModels" x:DataType="viewmodels:HomePageViewModel"
+             x:Class="UspechMobile.Views.HomePage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Label Text="Filter by:" VerticalOptions="Center" />
+            <Picker x:Name="CategoryPicker" ItemsSource="{Binding CategoryItems}" SelectedItem="{Binding SelectedCategory.Title}" Margin="5"/>
+        </StackLayout>
+
+        <Entry x:Name="SearchEntry" Text="{Binding SearchText}" Margin="10" />
+
+        <ListView ItemsSource="{Binding FilteredCourses}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
