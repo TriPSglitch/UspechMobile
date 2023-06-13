@@ -16,9 +16,6 @@ namespace UspechMobile.Data
             db.CreateTableAsync<Roles>().Wait();
             db.CreateTableAsync<Persons>().Wait();
             db.CreateTableAsync<Users>().Wait();
-            db.CreateTableAsync<Chats>().Wait();
-            db.CreateTableAsync<UserChats>().Wait();
-            db.CreateTableAsync<ChatMessages>().Wait();
             db.CreateTableAsync<Courses>().Wait();
             db.CreateTableAsync<UserCourses>().Wait();
             db.CreateTableAsync<Schedule>().Wait();
@@ -50,21 +47,6 @@ namespace UspechMobile.Data
         public Task<List<Users>> GetUsers()
         {
             return db.Table<Users>().ToListAsync();
-        }
-
-        public Task<List<Chats>> GetChats()
-        {
-            return db.Table<Chats>().ToListAsync();
-        }
-
-        public Task<List<ChatMessages>> GetChatMessages()
-        {
-            return db.Table<ChatMessages>().ToListAsync();
-        }
-
-        public Task<List<UserChats>> GetUsersChats()
-        {
-            return db.Table<UserChats>().ToListAsync();
         }
 
         public Task<List<Courses>> GetCourses()

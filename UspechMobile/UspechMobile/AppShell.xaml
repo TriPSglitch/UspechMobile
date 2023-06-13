@@ -7,6 +7,5 @@
         <ShellContent Title="Домашняя страница" ContentTemplate="{DataTemplate views:HomePage}"/>
         <ShellContent Title="Расписание" ContentTemplate="{DataTemplate views:SchedulePage}"/>
         <ShellContent Title="Мои курсы" ContentTemplate="{DataTemplate views:MyCoursesPage}"/>
-        <ShellContent Title="Чат и напоминания" ContentTemplate="{DataTemplate views:HomePage}"/>
     </TabBar>
 </Shell>

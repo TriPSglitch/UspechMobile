@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:UspechMobile.ViewModels" x:DataType="viewmodels:HomePageViewModel"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UspechMobile.Views.HomePage">
 
     <StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="10">
+        <StackLayout x:Name="Categories" Orientation="Horizontal" Margin="10">
             <Label Text="Filter by:" VerticalOptions="Center" />
-            <Picker x:Name="CategoryPicker" ItemsSource="{Binding CategoryItems}" SelectedItem="{Binding SelectedCategory.Title}" Margin="5"/>
+            <Picker x:Name="CategoryPicker" Margin="5">
+                <Picker.Items>
+                    <x:String>Точные науки</x:String>
+                    <x:String>Гуманитарные науки</x:String>
+                    <x:String>11 класс</x:String>
+                    <x:String>9 класс</x:String>
+                </Picker.Items>
+            </Picker>
         </StackLayout>
 
         <Entry x:Name="SearchEntry" Text="{Binding SearchText}" Margin="10" />
