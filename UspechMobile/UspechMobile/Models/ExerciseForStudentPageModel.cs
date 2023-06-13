@@ -4,7 +4,7 @@ using UspechMobile.DBModels;
 
 namespace UspechMobile.Models
 {
-    internal class ExercisePageModel : IExercisePageModel
+    internal class ExerciseForStudentPageModel : IExerciseForStudentPageModel
     {
         private string title;
         private string description;

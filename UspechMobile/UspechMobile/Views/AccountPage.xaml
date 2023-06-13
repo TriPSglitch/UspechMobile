@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UspechMobile.Views.AccountPage">
+
+    <StackLayout>
+        <Label Text="{Binding Person.Lastname}" />
+        <Label Text="{Binding Person.Firstname}" />
+        <Label Text="{Binding Person.Middlename}" />
+        <Label Text="{Binding Person.Phone}" />
+        <Label Text="{Binding Person.Email}" />
+
+        <Button Text="Редактировать" Command="{Binding EditCommand}" />
+        <Button Text="Выход" Command="{Binding LogoutCommand}" />
+        <Button Text="Назад" Command="{Binding GoBackCommand}" />
+    </StackLayout>
+</ContentPage>

@@ -6,9 +6,9 @@ using Xamarin.Forms;
 
 namespace UspechMobile.ViewModels
 {
-    internal class ExercisePageViewModel : BaseViewModel
+    internal class ExerciseForStudentPageViewModel : BaseViewModel
     {
-        private IExercisePageModel ExercisePageModel;
+        private IExerciseForStudentPageModel ExerciseForStudentPageModel;
 
         public ICommand DownloadFileCommand { get; }
         public ICommand AddAnswerCommand { get; }
@@ -19,11 +19,11 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Title;
+                return ExerciseForStudentPageModel.Title;
             }
             set
             {
-                ExercisePageModel.Title = value;
+                ExerciseForStudentPageModel.Title = value;
                 NotifyPropertyChanged(nameof(Title));
             }
         }
@@ -32,11 +32,11 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Description;
+                return ExerciseForStudentPageModel.Description;
             }
             set
             {
-                ExercisePageModel.Description = value;
+                ExerciseForStudentPageModel.Description = value;
                 NotifyPropertyChanged(nameof(Description));
             }
         }
@@ -45,11 +45,11 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Files;
+                return ExerciseForStudentPageModel.Files;
             }
             set
             {
-                ExercisePageModel.Files = value;
+                ExerciseForStudentPageModel.Files = value;
                 NotifyPropertyChanged(nameof(Files));
             }
         }
@@ -58,11 +58,11 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Answer;
+                return ExerciseForStudentPageModel.Answer;
             }
             set
             {
-                ExercisePageModel.Answer = value;
+                ExerciseForStudentPageModel.Answer = value;
                 NotifyPropertyChanged(nameof(Answer));
             }
         }
@@ -71,11 +71,11 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Grade;
+                return ExerciseForStudentPageModel.Grade;
             }
             set
             {
-                ExercisePageModel.Grade = value;
+                ExerciseForStudentPageModel.Grade = value;
                 NotifyPropertyChanged(nameof(Grade));
             }
         }
@@ -84,44 +84,43 @@ namespace UspechMobile.ViewModels
         {
             get
             {
-                return ExercisePageModel.Comments;
+                return ExerciseForStudentPageModel.Comments;
             }
             set
             {
-                ExercisePageModel.Comments = value;
+                ExerciseForStudentPageModel.Comments = value;
                 NotifyPropertyChanged(nameof(Comments));
             }
         }
 
-        public ExercisePageViewModel()
+        public ExerciseForStudentPageViewModel()
         {
-            ExercisePageModel = new ExercisePageModel();
+            ExerciseForStudentPageModel = new ExerciseForStudentPageModel();
 
-            // Инициализация команд
             DownloadFileCommand = new Command<string>(DownloadFile);
             AddAnswerCommand = new Command(AddAnswer);
             EditAnswerCommand = new Command(EditAnswer);
             GoBackCommand = new Command(GoBack);
         }
 
-        private void DownloadFile(string IDFile)
+        private void DownloadFile(string ID)
         {
-            ExercisePageModel.DownloadFile(IDFile);
+            ExerciseForStudentPageModel.DownloadFile(ID);
         }
 
         private void AddAnswer()
         {
-            ExercisePageModel.AddAnswer();
+            ExerciseForStudentPageModel.AddAnswer();
         }
 
         private void EditAnswer()
         {
-            ExercisePageModel.EditAnswer();
+            ExerciseForStudentPageModel.EditAnswer();
         }
 
         private void GoBack()
         {
-            ExercisePageModel.GoBack();
+            ExerciseForStudentPageModel.GoBack();
         }
     }
 }

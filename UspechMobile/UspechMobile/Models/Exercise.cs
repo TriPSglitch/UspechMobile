@@ -23,6 +23,8 @@ namespace UspechMobile.Models
             Task.Run(() => this.GetData()).Wait();
         }
 
+        public Exercise() { }
+
         private async void GetData()
         {
             Persons student = await App.Connection.db.Table<Persons>().Where(item => item.ID == this.IDStudent).FirstOrDefaultAsync();

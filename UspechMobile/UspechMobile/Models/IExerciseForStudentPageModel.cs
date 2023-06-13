@@ -3,7 +3,7 @@ using UspechMobile.DBModels;
 
 namespace UspechMobile.Models
 {
-    internal interface IExercisePageModel
+    internal interface IExerciseForStudentPageModel
     {
         string Title { get; set; }
         string Description { get; set; }

@@ -18,9 +18,6 @@ namespace UspechMobile.DBModels
         public int IDPerson { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public List<UserChats> UserChats { get; set; }
-
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<UserCourses> UserCourses { get; set; }
     }
 }

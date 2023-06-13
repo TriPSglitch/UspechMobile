@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UspechMobile.Views.AddAnswerToExercisePage">
+    
+    <StackLayout>
+        <Label Text="Название задания" />
+        <Label Text="{Binding Exercise.Title}" />
+
+        <Label Text="Ответ" />
+        <Editor Text="{Binding Answer}" />
+
+        <Button Text="Добавить файл" Command="{Binding AddFileCommand}" />
+        <ListView ItemsSource="{Binding AttachedFiles}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FileName}" />
+                            <Button Text="Удалить" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding ID}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Сохранить" Command="{Binding SaveCommand}" />
+        <Button Text="Назад" Command="{Binding GoBackCommand}" />
+    </StackLayout>
+</ContentPage>
